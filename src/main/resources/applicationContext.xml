@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <bean
-        name="customerRepository"
-        class="com.ashley.spring.demo2.repository.HibernateCustomerRepositoryImpl"/>
-
-    <bean
-        name="customerService"
-        class="com.ashley.spring.demo2.service.CustomerServiceImpl" autowire="byType">
-        <!-- <constructor-arg index="0" ref="customerRepository"/> -->
-
-    </bean>
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
+    <context:component-scan base-package="com.ashley.spring.demo2"/>
 
 </beans>
+
+<!--
+This file in the current commit is redundant. This file would be used to scan for beans and have beans
+defined within it. As of this commit and industry standard this project has opted for the AppConfig class
+method and the configuration is done inline wth code insted of outside and in an XML file such
+as this one
+-->
