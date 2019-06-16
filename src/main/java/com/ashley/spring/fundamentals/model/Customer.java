@@ -1,4 +1,4 @@
-package com.ashley.spring.demo2.model;
+package com.ashley.spring.fundamentals.model;
 
 public class Customer {
     private String firstName, lastName;

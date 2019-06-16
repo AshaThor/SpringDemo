@@ -1,6 +1,6 @@
-package com.ashley.spring.demo2;
+package com.ashley.spring.fundamentals;
 
-import com.ashley.spring.demo2.service.CustomerService;
+import com.ashley.spring.fundamentals.service.CustomerService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
